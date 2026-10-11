@@ -40,8 +40,8 @@ are easy to forget about, leading to confusing "it should be working" debugging 
 Clone the repository or download `Wslink.ps1` directly:
 
 ```powershell
-git clone https://github.com/<your-username>/wsl-portforward.git
-cd wsl-portforward
+git clone https://github.com/masturbyte/Wslink.git
+cd Wslink
 ```
 
 ## Usage
@@ -51,31 +51,31 @@ All commands must be run from an **elevated** PowerShell session (Run as Adminis
 ### Forward a single port
 
 ```powershell
-.\Wslink.ps1.ps1 -Ports 4444
+.\Wslink.ps1 -Ports 4444
 ```
 
 ### Forward multiple ports at once
 
 ```powershell
-.\Wslink.ps1.ps1 -Ports 80,443,4444
+.\Wslink.ps1 -Ports 80,443,4444
 ```
 
 ### Specify the WSL IP manually
 
 ```powershell
-.\Wslink.ps1.ps1 -Ports 4444 -WslIp 172.28.42.164
+.\Wslink.ps1 -Ports 4444 -WslIp 172.28.42.164
 ```
 
 ### Check current configuration without changing anything
 
 ```powershell
-.\Wslink.ps1.ps1 -ListOnly
+.\Wslink.ps1 -ListOnly
 ```
 
 ### Remove forwarding and firewall rules
 
 ```powershell
-.\Wslink.ps1.ps1 -Ports 4444 -Remove
+.\Wslink.ps1 -Ports 4444 -Remove
 ```
 
 ### Example output
@@ -120,7 +120,7 @@ Windows, even if you haven't changed any ports.
 Your execution policy is blocking local scripts. Either run it with a one-off bypass:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\Wslink.ps1.ps1 -Ports 4444
+powershell -ExecutionPolicy Bypass -File .\Wslink.ps1 -Ports 4444
 ```
 
 or allow locally-authored scripts for your user:
