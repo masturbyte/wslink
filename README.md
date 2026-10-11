@@ -1,6 +1,6 @@
-# WSL Port Forward
+# WSLink
 
-A small PowerShell utility that keeps Windows ↔ WSL2 port forwarding in sync.
+If your reverse shell, Metasploit listener, or local web server won’t connect through WSL2 — even though the VPN and ports look fine — this is almost always a WSL2 ↔ Windows port forwarding issue.
 
 WSL2 runs behind a NAT'd virtual network adapter with its own internal IP address, and that
 address changes every time WSL restarts. Anything that depends on inbound connections reaching
